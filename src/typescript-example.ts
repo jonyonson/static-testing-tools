@@ -2,6 +2,11 @@ function add(a: number, b: number): number {
   return a + b
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function something() {
+  console.log('')
+}
+
 interface User {
   name: {
     first: string

@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm run check-types && lint-staged && npm run build
+npm run check-types && ./node_modules/.bin/lint-staged && npm run build

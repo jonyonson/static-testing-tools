@@ -2,10 +2,6 @@ function add(a: number, b: number): number {
   return a + b
 }
 
-function newFunction() {
-  console.log('just because')
-}
-
 interface User {
   name: {
     first: string

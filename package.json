@@ -3,9 +3,29 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "babel src --extensions .js,.ts,.tsx --out-dir dist",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
+    "check-types": "tsc",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts|tsx)\"",
+    "format": "npm run prettier -- --write",
+    "check-format": "npm run prettier -- --list-different",
+    "validate": "npm run check-types && npm run check-format && npm run lint && npm run build"
+  },
   "keywords": [],
   "author": "Kent C. Dodds <kent@doddsfamily.us> (http://kentcdodds.com/)",
   "license": "MIT",
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.5",
+    "@babel/preset-typescript": "^7.14.5",
+    "@typescript-eslint/eslint-plugin": "^4.27.0",
+    "@typescript-eslint/parser": "^4.27.0",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^6.0.0",
+    "prettier": "^2.3.1",
+    "typescript": "^4.3.4"
+  }
 }
